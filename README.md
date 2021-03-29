@@ -1,6 +1,7 @@
 # Estoque
 Projeto de estudo. Aplicando conceitos aprendido no curso de Asp.net core;
-O projeto foi desenvolvivido com fluent.
+* O projeto foi desenvolvivido utilizando **_Fluent_** para configuração da base de dados.
+* Foi adicionao o padrão **_Repository_** na camada de negócio.
 
 ## Camadas:
 * WEB
