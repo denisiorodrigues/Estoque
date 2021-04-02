@@ -15,6 +15,12 @@ namespace DR.Data.Repository
         protected readonly MeuDbContext Db;
         protected readonly DbSet<TEntity> DbSet;
 
+        public Repository(MeuDbContext db)
+        {
+            Db = db;
+            DbSet = db.Set<TEntity>();
+        }
+
         public async Task<IEnumerable<TEntity>> Buscar(Expression<Func<TEntity, bool>> predicate)
         {
             return await DbSet.AsNoTracking().Where(predicate).ToListAsync();
@@ -43,8 +49,7 @@ namespace DR.Data.Repository
 
         public virtual async Task Remover(Guid id)
         {
-            var entity = new TEntity { Id = id };
-            DbSet.Remove(entity);
+            DbSet.Remove(new TEntity { Id = id });
             await SaveChanges();
         }
 

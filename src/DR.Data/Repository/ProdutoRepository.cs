@@ -1,28 +1,34 @@
 ﻿using DR.Business.Interfaces;
 using DR.Business.Models;
+using DR.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DR.Data.Repository
 {
     public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
+        public ProdutoRepository(MeuDbContext context) 
+            : base(context)
+        { }
+
         public async Task<Produto> ObterProdutoFornecedor(Guid id)
         {
             return await Db.Produtos.AsNoTracking().Include(f => f.Fornecedor)
                 .FirstOrDefaultAsync(q => q.Id == id);
         }
 
-        public Task<IEnumerable<Produto>> ObterProdutoFornecedores()
+        public async Task<IEnumerable<Produto>> ObterProdutoFornecedores()
         {
-            throw new NotImplementedException();
+            return await Db.Produtos.AsNoTracking().Include(f => f.Fornecedor).OrderBy(p => p.Nome).ToListAsync();
         }
 
-        public Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId)
+        public async Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId)
         {
-            throw new NotImplementedException();
+            return await Buscar(p => p.FornecedorId == fornecedorId);
         }
     }
 }

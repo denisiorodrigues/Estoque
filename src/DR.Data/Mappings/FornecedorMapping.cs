@@ -26,7 +26,7 @@ namespace DR.Data.Mappings
 
             builder.HasMany(f => f.Produtos)
                 .WithOne(p => p.Fornecedor)
-                .HasForeignKey(p => p.ForncedorId);
+                .HasForeignKey(p => p.FornecedorId);
 
             builder.ToTable("Fornecedores");
         }
