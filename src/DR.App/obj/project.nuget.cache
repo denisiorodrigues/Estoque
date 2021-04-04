@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zG59gBs4EWrn0ezW4pI+/v6uKrSSN8FO0fP+5/A4bdhA4s1d/1bb/YW2N7xqyLxGrg3Ft2y/QbGJIv7gIa23cA==",
+  "dgSpecHash": "B6tRWuSCk31mAnVRH9usrPtQL0lOiFYGxtJ1PeAG/gAJHQ7mwcEDDPW9Q4fdZuXzCqWQB+kcvDEQ+NShaYcFtA==",
   "success": true,
   "projectFilePath": "D:\\Labs\\Estoque\\src\\DR.App\\DR.App.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,8 @@
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\5.0.4\\microsoft.extensions.fileproviders.embedded.5.0.4.nupkg.sha512",
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.4\\microsoft.extensions.identity.core.5.0.4.nupkg.sha512",
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.4\\microsoft.extensions.identity.stores.5.0.4.nupkg.sha512",
     "C:\\Users\\denisio\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",

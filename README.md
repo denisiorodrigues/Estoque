@@ -20,8 +20,8 @@ com Automapper para realizar a troca de informações entre os modelos de negóc
 Descrição | Nuget | donet CLI | Observação
 --- | --- | --- | ---
 **[EntityFramework Core 5.0.4](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/5.0.4)** | `Install-Package Microsoft.EntityFrameworkCore` | `dotnet add package Microsoft.EntityFrameworkCore` | *ORM*
-**[EntityFramework Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational/6.0.0-preview.2.21154.2)** | `Install-Package Microsoft.EntityFrameworkCore.Relational` | `dotnet add package Microsoft.EntityFrameworkCore.Relational` | *Pacote adicional para usar no mapeamento do Fluent na aplicação*
-**[EntityFramework Sqlserver](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/6.0.0-preview.2.21154.2)** | `Install-Package Microsoft.EntityFrameworkCore.SqlServer` | `dotnet add package Microsoft.EntityFrameworkCore.SqlServer` | *Pacote adicional para comandos SQL SERVER ou gerar scripts sql*
+**[EntityFramework Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational/5.0.4)** | `Install-Package Microsoft.EntityFrameworkCore.Relational` | `dotnet add package Microsoft.EntityFrameworkCore.Relational` | *Pacote adicional para usar no mapeamento do Fluent na aplicação*
+**[EntityFramework Sqlserver](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/5.0.4)** | `Install-Package Microsoft.EntityFrameworkCore.SqlServer` | `dotnet add package Microsoft.EntityFrameworkCore.SqlServer` | *Pacote adicional para comandos SQL SERVER ou gerar scripts sql*
 **[Automapper](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)** | `Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 8.1.1` | `dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 8.1.1` | *Adicionando o Autommaper com a injeção de dependência*
 
 ## Dicas de comandos 💡: 
