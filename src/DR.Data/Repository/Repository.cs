@@ -35,6 +35,7 @@ namespace DR.Data.Repository
         {
             return await DbSet.ToListAsync();
         }
+
         public virtual async Task Adicionar(TEntity entity)
         {
             DbSet.Add(entity);

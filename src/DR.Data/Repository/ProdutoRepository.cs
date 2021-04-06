@@ -21,7 +21,7 @@ namespace DR.Data.Repository
                 .FirstOrDefaultAsync(q => q.Id == id);
         }
 
-        public async Task<IEnumerable<Produto>> ObterProdutoFornecedores()
+        public async Task<IEnumerable<Produto>> ObterProdutosFornecedores()
         {
             return await Db.Produtos.AsNoTracking().Include(f => f.Fornecedor).OrderBy(p => p.Nome).ToListAsync();
         }
