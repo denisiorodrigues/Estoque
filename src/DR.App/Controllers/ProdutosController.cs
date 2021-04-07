@@ -2,9 +2,11 @@
 using DR.App.ViewsModels;
 using DR.Business.Interfaces;
 using DR.Business.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace DR.App.Controllers
@@ -49,7 +51,15 @@ namespace DR.App.Controllers
             produtoViewModel = await PopularFornecedores(produtoViewModel);
             if (!ModelState.IsValid) return View(produtoViewModel);
 
-            //Falta o upload de imagens
+            var prefixoImagem = Guid.NewGuid() + "_";
+
+            if (!await UploadImagem(produtoViewModel.ImagemUpload, prefixoImagem))
+            {
+                return View(produtoViewModel);
+            }
+
+            produtoViewModel.Imagem = prefixoImagem + produtoViewModel.ImagemUpload.FileName;
+
             await _produtoRepository.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
             return RedirectToAction("Index");
@@ -116,6 +126,26 @@ namespace DR.App.Controllers
         {
             produto.Fornecedores = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos());
             return produto;
+        }
+
+        private async Task<bool> UploadImagem(IFormFile arquivo, string prefixoImagem)
+        {
+            if (arquivo.Length <= 0) return false;
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens", prefixoImagem + arquivo.FileName);
+
+            if (System.IO.File.Exists(path))
+            {
+                ModelState.AddModelError(string.Empty, "Já existe um arquivo com esse nome");
+                return false;
+            }
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await arquivo.CopyToAsync(stream);
+            }
+
+            return true;
         }
     }
 }
