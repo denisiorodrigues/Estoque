@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DR.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20210329003349_Initial")]
-    partial class Initial
+    [Migration("20210409232947_CorringindoColunaAivoParaAtivo2")]
+    partial class CorringindoColunaAivoParaAtivo2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -106,7 +106,7 @@ namespace DR.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(1000)");
 
-                    b.Property<Guid>("ForncedorId")
+                    b.Property<Guid>("FornecedorId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Imagem")
@@ -122,7 +122,7 @@ namespace DR.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ForncedorId");
+                    b.HasIndex("FornecedorId");
 
                     b.ToTable("Produtos");
                 });
@@ -141,7 +141,7 @@ namespace DR.Data.Migrations
                 {
                     b.HasOne("DR.Business.Models.Fornecedor", "Fornecedor")
                         .WithMany("Produtos")
-                        .HasForeignKey("ForncedorId")
+                        .HasForeignKey("FornecedorId")
                         .IsRequired();
 
                     b.Navigation("Fornecedor");

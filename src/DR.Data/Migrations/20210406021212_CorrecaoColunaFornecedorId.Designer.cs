@@ -96,7 +96,7 @@ namespace DR.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("Aivo")
+                    b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DataCadastro")

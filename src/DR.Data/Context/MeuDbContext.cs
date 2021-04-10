@@ -32,5 +32,18 @@ namespace DR.Data.Context
 
             base.OnModelCreating(modelBuilder);
         }
+
+        /// <summary>
+        /// Adicionando essa configuração por conta de um erro de tracking
+        /// Solução:
+        /// https://wilsonsantosnet.medium.com/entity-framework-enablesensitivedatalogging-72a79639820b
+        /// </summary>
+        /// <param name="optionsBuilder">Parametro de configuração</param>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }

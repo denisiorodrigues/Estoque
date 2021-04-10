@@ -10,7 +10,7 @@ namespace DR.Business.Models
         public string Imagem { get; set; }
         public decimal Valor { get; set; }
         public DateTime DataCadastro { get; set; }
-        public bool Aivo { get; set; }
+        public bool Ativo { get; set; }
 
         public Fornecedor Fornecedor { get; set; }
     }

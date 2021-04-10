@@ -36,7 +36,7 @@ namespace DR.App.ViewsModels
         public DateTime DataCadastro { get; set; }
         
         [DisplayName("Ativo?")]
-        public bool Aivo { get; set; }
+        public bool Ativo { get; set; }
 
         public FornecedorViewModel Fornecedor { get; set; }
 
