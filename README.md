@@ -9,7 +9,8 @@
 com Automapper para realizar a troca de informações entre os modelos de negócio e os modelos de aprenseção. <p/>
 <p>Para configurar o _Automapper_ precisadmos adicionar o pacote do mesmo. E também precisamos adicionar uma extensão para a injeção de dependência do aspnet para o _Automapper_ funcionar.</p>
 <p>Vamos configurar o _Automapper_ na classe _stratup.cs_ =, referenciando a própria _Stratup_, e depois criar uma arquivo de configuração para configurar as _ViewModels_ com as Entidades(_Models_).</p>
-<p> O _AutoMapper_ entende a configuração desde que possua alguma classe que esteja herdadno de _Profile.cs_, fuinciona meio que automático.</p>
+<p> O _AutoMapper_ entende a configuração desde que possua alguma classe que esteja herdando de _Profile.cs_, fuinciona meio que automático.</p>
+<p> O _FluentValidation_ facilita nas validações na camada de _Business_, escrita de forma fluente.</p>
 
 ## Camadas:
 * WEB
@@ -23,6 +24,7 @@ Descrição | Nuget | donet CLI | Observação
 **[EntityFramework Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational/5.0.4)** | `Install-Package Microsoft.EntityFrameworkCore.Relational` | `dotnet add package Microsoft.EntityFrameworkCore.Relational` | *Pacote adicional para usar no mapeamento do Fluent na aplicação*
 **[EntityFramework Sqlserver](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/5.0.4)** | `Install-Package Microsoft.EntityFrameworkCore.SqlServer` | `dotnet add package Microsoft.EntityFrameworkCore.SqlServer` | *Pacote adicional para comandos SQL SERVER ou gerar scripts sql*
 **[Automapper](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)** | `Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 8.1.1` | `dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 8.1.1` | *Adicionando o Autommaper com a injeção de dependência*
+**[Fluent Validation](https://www.nuget.org/packages/FluentValidation)** | `Install-Package FluentValidation -Version 10.0.4` | `dotnet add package FluentValidation --version 10.0.4` | *Esse framework ajudará nas validaçãoes das entidades e ficarará na cama de _Business_. Mais detalhes no site do [FluenteValidation](https://fluentvalidation.net/)*
 
 ## Dicas de comandos 💡: 
 ### Comando para adicionar uma migração

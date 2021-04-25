@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1rVnt5UBgSumOPcPaglUmJ2+a7YhvWae5UA4HFnf8JypluAouMw4iwUVPYdW50jKKaQnEFCZagOITBaEepd6Jw==",
+  "dgSpecHash": "C35OCqjjI5i5DWrRCg4VsTHjHjR6biAClsqF1fv3G7hsZ6OPxDTVV8Qn+T3S40Dj52ichCXPBrdMtQxm/+buvg==",
   "success": true,
   "projectFilePath": "D:\\Labs\\Estoque\\src\\DR.Business\\DR.Business.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\denisio\\.nuget\\packages\\fluentvalidation\\10.0.4\\fluentvalidation.10.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
