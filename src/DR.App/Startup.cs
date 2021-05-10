@@ -12,6 +12,7 @@ namespace DR.App
     {
         public IConfiguration Configuration { get; }
 
+        [System.Obsolete]
         public Startup(IHostingEnvironment hostingEnvironment)
         {
             var builder = new ConfigurationBuilder()

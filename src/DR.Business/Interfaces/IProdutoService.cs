@@ -9,5 +9,6 @@ namespace DR.Business.Interfaces
         Task Adicionar(Produto produto);
         Task Atualizar(Produto produto);
         Task Remover(Guid id);
+        void Dispose();
     }
 }

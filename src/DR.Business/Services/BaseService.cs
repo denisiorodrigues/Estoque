@@ -1,11 +1,19 @@
-﻿using DR.Business.Models;
+﻿using DR.Business.Interfaces;
+using DR.Business.Models;
+using DR.Business.Notifications;
 using FluentValidation;
 using FluentValidation.Results;
 
 namespace DR.Business.Services
 {
-    public abstract class BaseServices
+    public abstract class BaseService
     {
+        private readonly INotificador _notificador;
+        public BaseService(INotificador notificador)
+        {
+            _notificador = notificador;
+        }
+
         protected void Notificar(ValidationResult validationResult)
         {
             foreach (var error in validationResult.Errors)
@@ -16,7 +24,7 @@ namespace DR.Business.Services
 
         protected void Notificar(string mensagem)
         {
-            //Propagar moanesagem de erro até a camada de aprensentação
+            _notificador.Handle(new Notificacao(mensagem));
         }
 
         protected bool ExecutarValidacao<TV, TE>(TV validacao, TE entidade) where TV : AbstractValidator<TE>  where TE : Entity

@@ -1,5 +1,7 @@
 ﻿using DR.App.Extensions;
 using DR.Business.Interfaces;
+using DR.Business.Notifications;
+using DR.Business.Services;
 using DR.Data.Context;
 using DR.Data.Repository;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
@@ -16,6 +18,11 @@ namespace DR.App.Configurations
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
             services.AddSingleton<IValidationAttributeAdapterProvider, MoedaValidationAttributeAdapterProvider>();
+
+            //Notificações - Ficar disponível por todo o Request
+            services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<IFornecedorService, FornecedorService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
 
             return services;
         }
