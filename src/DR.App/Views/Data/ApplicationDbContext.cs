@@ -13,6 +13,5 @@ namespace DR.App.Data
             : base(options)
         {
         }
-        public DbSet<DR.App.ViewsModels.ProdutoViewModel> ProdutoViewModel { get; set; }
     }
 }
