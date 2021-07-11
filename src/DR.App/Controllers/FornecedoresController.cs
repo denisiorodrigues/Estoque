@@ -102,6 +102,8 @@ namespace DR.App.Controllers
             var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
             await _fornecedorService.Atualizar(fornecedor);
 
+            fornecedorViewModel = await ObterFornecedorProdutosEndereco(id);
+
             if (!OperacaoValida()) return View(fornecedorViewModel);
 
             TempData["Sucesso"] = "Fornecedor atualizado com sucesso";

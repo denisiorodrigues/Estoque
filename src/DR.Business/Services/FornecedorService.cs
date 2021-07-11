@@ -40,6 +40,7 @@ namespace DR.Business.Services
         {
             if (!ExecutarValidacao(new FornecedorValidation(), fornecedor)) return;
 
+
             if (_fornecedorRepository.Buscar(x => x.Documento == fornecedor.Documento && x.Id != fornecedor.Id).Result.Any())
             {
                 Notificar("Já existe um fornecedor com este documento informado.");
