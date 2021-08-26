@@ -26,7 +26,7 @@ Descrição | Nuget | donet CLI | Observação
 **[Automapper](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)** | `Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 8.1.1` | `dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 8.1.1` | *Adicionando o Autommaper com a injeção de dependência*
 **[Fluent Validation](https://www.nuget.org/packages/FluentValidation)** | `Install-Package FluentValidation -Version 10.0.4` | `dotnet add package FluentValidation --version 10.0.4` | *Esse framework ajudará nas validaçãoes das entidades e ficarará na cama de _Business_. Mais detalhes no site do [FluenteValidation](https://fluentvalidation.net/)*
 
-## Dicas de comandos 💡: 
+## Dicas 💡: 
 ### Comando para adicionar uma migração
 ```
 Add-Migration Initial -Verbose -Context MeuDbContext
@@ -39,3 +39,6 @@ Script-Migration
 ```
 Update-Database -Context ApplicationDbContext
 ``` 
+
+### Documentação para implementação de LOG
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-5.0#welog
